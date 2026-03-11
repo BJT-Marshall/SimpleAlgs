@@ -30,8 +30,8 @@ def f4(inp):
 
 def U_f1():
     """
-    Generates a unitary gate with action :math:`U_f\ket{x}\ket{y} = \ket{x}\ket{y XOR f(x)}` for function 
-    :math:`f: \sigma \rightarrow \sigma`, :math:`f(x) = f_1(x) = 0`.
+    Generates a unitary gate with action :math:`U_f\\ket{x}\\ket{y} = \\ket{x}\\ket{y XOR f(x)}` for function 
+    :math:`f: \\sigma \\rightarrow \\sigma`, :math:`f(x) = f_1(x) = 0`.
     
 
     :returns gate: :python:`UnitaryGate` object implementing :math:`U_{f1}`.
@@ -45,8 +45,8 @@ def U_f1():
 
 def U_f2():
     """
-    Generates a unitary gate with action :math:`U_f\ket{x}\ket{y} = \ket{x}\ket{y XOR f(x)}` for function 
-    :math:`f: \sigma \rightarrow \sigma`, :math:`f(x) = f_2(x) = x`.
+    Generates a unitary gate with action :math:`U_f\\ket{x}\\ket{y} = \\ket{x}\\ket{y XOR f(x)}` for function 
+    :math:`f: \\sigma \\rightarrow \\sigma`, :math:`f(x) = f_2(x) = x`.
     
 
     :returns gate: :python:`UnitaryGate` object implementing :math:`U_{f1}`.
@@ -61,8 +61,8 @@ def U_f2():
 
 def U_f3():
     """
-    Generates a unitary gate with action :math:`U_f\ket{x}\ket{y} = \ket{x}\ket{y XOR f(x)}` for function 
-    :math:`f: \sigma \rightarrow \sigma`, :math:`f(x) = f_3(x) = 1` if :math:`x = 0` or :math:`f(x) = f_3(x) = 0` if :math:`x = 1`.
+    Generates a unitary gate with action :math:`U_f\\ket{x}\\ket{y} = \\ket{x}\\ket{y XOR f(x)}` for function 
+    :math:`f: \\sigma \\rightarrow \\sigma`, :math:`f(x) = f_3(x) = 1` if :math:`x = 0` or :math:`f(x) = f_3(x) = 0` if :math:`x = 1`.
     
 
     :returns gate: :python:`UnitaryGate` object implementing :math:`U_{f1}`.
@@ -78,8 +78,8 @@ def U_f3():
 
 def U_f4():
     """
-    Generates a unitary gate with action :math:`U_f\ket{x}\ket{y} = \ket{x}\ket{y XOR f(x)}` for function 
-    :math:`f: \sigma \rightarrow \sigma`, :math:`f(x) = f_4(x) = 1`.
+    Generates a unitary gate with action :math:`U_f\\ket{x}\\ket{y} = \\ket{x}\\ket{y XOR f(x)}` for function 
+    :math:`f: \\sigma \\rightarrow \\sigma`, :math:`f(x) = f_4(x) = 1`.
     
 
     :returns gate: :python:`UnitaryGate` object implementing :math:`U_{f1}`.
@@ -97,11 +97,11 @@ def U_f4():
 def deutsch_algorithm(U):
     """
     Generates a circuit performing Deutsch's algorithm given a unitary gate, :math:`U_f`.
-    Deutsch's algorithm detemines whether an inpute oracle function :math:`f(x) : \sigma \rightarrow \sigma`
+    Deutsch's algorithm detemines whether an inpute oracle function :math:`f(x) : \\sigma \\rightarrow \\sigma`
     is balanced or constant in a single call of the oracle function. 
     The result is measured into a classical register and will measure 0 if the function is constant and 1 if the function is balanced.
 
-    :param U: Function generating a unitary oracle implementing classical function :math:'f(x)' with action :math:`U_f\ket{x}\ket{y} = \ket{x}\ket{y XOR f(x)}`.
+    :param U: Function generating a unitary oracle implementing classical function :math:'f(x)' with action :math:`U_f\\ket{x}\\ket{y} = \\ket{x}\\ket{y XOR f(x)}`.
     :type U: function
     :return qc: The :python:`QuantumCircuit` object implementing Deutsch's Algorithm with oracle :python:`U`
     :rtype qc: QuantumCircuit
@@ -126,7 +126,7 @@ def deutsch_algorithm(U):
 
 def test_deutsch():
     """
-    Compiles and runs Deutsch's Algorithm for the four possible oracles :math:`U_f, f:\sigma \rightarrow \sigma` using the :python:`AerSimulator` from :python:`qiskit_aer`.
+    Compiles and runs Deutsch's Algorithm for the four possible oracles :math:`U_f, f:\\sigma \\rightarrow \\sigma` using the :python:`AerSimulator` from :python:`qiskit_aer`.
     A circuit diagram is generated for each case as well as a histogram containing the resulting counts from 1024 shots of the algorithm.
     """
     deutsch_algorithm(U_f1).draw(output = 'mpl', filename = 'f1Test')

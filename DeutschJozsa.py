@@ -14,7 +14,7 @@ import numpy as np
 
 def constant_oracle(n):
     """
-    Generates a unitary oracle implementing the a constant function of the form :math:`f: \sigma^n \rightarrow \sigma`. 
+    Generates a unitary oracle implementing the a constant function of the form :math:`f: \\sigma^n \\rightarrow \\sigma`. 
 
     :param n: Dimensionality of the input for the oracle.
     :type n: int
@@ -37,7 +37,7 @@ def constant_oracle(n):
     
 def balanced_oracle(n):
     """
-    Generates a unitary oracle implementing the a balanced function of the form :math:`f: \sigma^n \rightarrow \sigma`. 
+    Generates a unitary oracle implementing the a balanced function of the form :math:`f: \\sigma^n \\rightarrow \\sigma`. 
 
     :param n: Dimensionality of the input for the oracle.
     :type n: int
@@ -76,7 +76,7 @@ def balanced_oracle(n):
 
 def deutsch_jozsa_oracle(n):
     """
-    Generates a unitary oracle implementing the a function of the form :math:`f: \sigma^n \rightarrow \sigma` where the function is
+    Generates a unitary oracle implementing the a function of the form :math:`f: \\sigma^n \\rightarrow \\sigma` where the function is
     constant with 50% chance or constant with 50% chance. 
 
     :param n: Dimensionality of the input for the oracle.
@@ -106,10 +106,10 @@ def deutsch_jozsa(oracle):
 
 def test_deutsch_jozsa(oracle, draw = False, filename = None):
     """
-    Compiles and runs the Deutsch-Jozsa algorithm for an oracle :math:`U_f` implementing :math:`f:\sigma^n \rightarrow \sigma` using the :python:`AerSimulator` from :python:`qiskit_aer`.
+    Compiles and runs the Deutsch-Jozsa algorithm for an oracle :math:`U_f` implementing :math:`f:\\sigma^n \\rightarrow \\sigma` using the :python:`AerSimulator` from :python:`qiskit_aer`.
     A circuit diagram of the algorithm can be generated dependant on the :python:`draw` flag.
     
-    :param oracle: Unitary oracle implementing a function of the form :math:`f:\sigma^n \rightarrow \sigma` furfiling the Deutsch-Jozsa promise.
+    :param oracle: Unitary oracle implementing a function of the form :math:`f:\\sigma^n \\rightarrow \\sigma` furfiling the Deutsch-Jozsa promise.
     :type oracle: QuantumCircuit
     :param draw: Boolean flag used to determine if a circuit diagram of the Deutsch-Jozsa circuit is to be generated.
     :type draw: bool
